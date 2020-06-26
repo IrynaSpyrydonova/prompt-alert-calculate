@@ -26,7 +26,7 @@ body:before {
     transform: translate(-50%, -50%);
     background:#fce4ec;
     width: 50vw;
-    height: 50vh;
+    height: 60vh;
     border-radius: 10px;
 
 } 
@@ -57,7 +57,7 @@ body:before {
 
 .btn button {
     font-size: 1rem;
-    padding: .7rem;
+    padding: .4rem;
     color: #fff;
     background: #755360;
     border-radius: 3px;
@@ -68,11 +68,11 @@ body:before {
 }
 
 .box .input input {
-    height: 3.7rem;
+    height: 3rem;
     width: 15rem;
     margin: 1rem;
     font-size: 1rem;
-    padding: .7rem;
+    padding: .4rem;
     border-radius: 5px;
 }
 
