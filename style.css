@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body:before {
+    content: '';
+    background: url('./img/bloom-blooming-blossom-bright-414660\ \(1\).jpg') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background:#fce4ec;
+    width: 50vw;
+    height: 50vh;
+    border-radius: 10px;
+
+} 
+
+.container p {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem;
+    color: #bf5f82;
+    padding: 15px;
+}
+
+.wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    display: flex;
+    
+}
+
+.btn{
+    margin: 1rem;
+}
+
+.btn button {
+    font-size: 1rem;
+    padding: .7rem;
+    color: #fff;
+    background: #755360;
+    border-radius: 3px;
+}
+
+.btn button.info {
+    background: #255d00;
+}
+
+.box .input input {
+    height: 3.7rem;
+    width: 15rem;
+    margin: 1rem;
+    font-size: 1rem;
+    padding: .7rem;
+    border-radius: 5px;
+}
+
+button.btn-main{
+    width: 9rem;
+}
+.btn span {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.btn button:hover {
+    color: #755360;
+    background: #fff;
+}
+
+.btn button:focus, .input input {
+    outline: none;
+}
+
+@media(max-width:768px){
+    .container {
+        width: 70vw;
+        height: 70vh;
+    }
+}
