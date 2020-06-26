@@ -82,7 +82,7 @@ function divideHandler() {
   console.log('lastResult (before):', typeof lastResult, '\n', lastResult);
 
   // read a number from the user
-
+  
 
   // divide the last result by the user's number and reassign lastResult
   _;
