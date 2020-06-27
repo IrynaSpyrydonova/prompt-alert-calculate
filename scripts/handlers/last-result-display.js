@@ -6,6 +6,7 @@ function displayLastResultHandler() {
   console.log('-- action: display lastResult');
   console.log('lastResult:', typeof lastResult, '\n', lastResult);
 
-  alert(`lastResult: ${lastResult}`);
+  const displayResult = document.getElementById('message');
+  displayResult.innerHTML = `${lastResult}`;
 
 }
