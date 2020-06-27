@@ -26,7 +26,7 @@ body:before {
     transform: translate(-50%, -50%);
     background:#fce4ec;
     width: 50vw;
-    height: 60vh;
+    height: 70vh;
     border-radius: 10px;
 
 } 
@@ -78,6 +78,7 @@ body:before {
 
 button.btn-main{
     width: 9rem;
+    margin-bottom: 1rem;
 }
 .btn span {
     font-size: 1.5rem;
