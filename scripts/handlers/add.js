@@ -91,5 +91,5 @@ function addHandler() {
   console.log('lastResult (after):', typeof lastResult, '\n', lastResult);
 
   alert(`the new result is: ${lastResult}`);
-  document.getElementById("input1").value = '';
+  document.getElementById("input1").value = ``;
 }
