@@ -3,7 +3,7 @@
 > `Calculator`
 
 - This project helps you to learn and understand how you could create a calculator in different ways with a range of different applications.
-- As a user you might get an understanding of how to add, divide, substract and multiply numbers.
+- As a user you might get an understanding of how to add, divide, subtract and multiply numbers.
 
 
 
