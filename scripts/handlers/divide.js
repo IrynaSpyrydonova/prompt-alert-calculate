@@ -85,7 +85,7 @@ function divideHandler() {
   const num1 = Number(document.getElementById("input1").value);
 
   // divide the last result by the user's number and reassign lastResult
-  const result = divide(num1,lastResult);
+  const result = divide(lastResult, num1);
   lastResult = result;
   
   console.log('lastResult (after):', typeof lastResult, '\n', lastResult);
