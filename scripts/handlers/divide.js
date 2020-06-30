@@ -80,11 +80,11 @@ function divideHandler() {
   debugger;
   console.log('-- action: divide');
   console.log('lastResult (before):', typeof lastResult, '\n', lastResult);
-
+  
     // read a number from the user
     let num1 = Number(document.getElementById('input1').value);
     let num2 = Number(document.getElementById('input2').value);
-  
+
     // divide the last result by the user's number and reassign lastResult
     if(lastResult === 0 || (num1 !==0 && num2 !== 0)) {
       const result =  divide(num1, num2);
