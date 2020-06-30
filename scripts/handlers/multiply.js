@@ -86,16 +86,39 @@ function multiplyHandler() {
   console.log("lastResult (before):", typeof lastResult, "\n", lastResult);
 
   // read a number from the user
-  const userNumber = Number(document.getElementById("input1").value);
-  
-  console.log(userNumber)
+  let userNumber1 = Number(document.getElementById("input1").value);
+  console.log(userNumber1);
+  let userNumber2 = Number(document.getElementById("input2").value);
+  console.log(userNumber2);
 
   // multiply the last result by the user's number and reassign lastResult
-
-  lastResult = multiply(lastResult, userNumber);
-
-  console.log("lastResult (after):", typeof lastResult, "\n", lastResult);
+  if(lastResult === 0 || (userNumber1 !==0 && userNumber2 !== 0)) {
+    const result =  multiply(userNumber1, userNumber2);
+    lastResult = result;
+    console.log('lastResult (after):', typeof lastResult, '\n', lastResult);
+  } else {
+    if (userNumber1 !==0) {
+      const result =  multiply(lastResult, userNumber1);
+      lastResult = result;
+      console.log('lastResult (after):', typeof lastResult, '\n', lastResult);
+    } else {
+      const result =  multiply(lastResult, userNumber2);
+      lastResult = result;
+      console.log('lastResult (after):', typeof lastResult, '\n', lastResult);
+    }
+  };
 
   alert(`the new result is: ${lastResult}`);
-  document.getElementById("input1").value = '';
+  const reset1 = document.getElementById(`input1`);
+  reset1.value = ``;
+  const reset2 = document.getElementById(`input2`);
+  reset2.value = ``;
 }
+
+
+
+  
+  
+  
+
+  

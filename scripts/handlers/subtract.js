@@ -12,7 +12,7 @@ function subtract(x, y) {
   if (typeof x !== 'number') { throw new TypeError('x'); }
   if (typeof y !== 'number') { throw new TypeError('y'); }
 
-  const result = x - y;
+  const result = _;
 
   if (typeof result !== 'number') { throw new TypeError('result'); }
   return result;
@@ -82,13 +82,31 @@ function subtractHandler() {
   console.log('lastResult (before):', typeof lastResult, '\n', lastResult);
 
   // read a number from the user
-
-  const userNumber = Number(document.getElementById('input1').value);
+  let userNumber1 = Number(document.getElementById("input1").value);
+  console.log(userNumber1);
+  let userNumber2 = Number(document.getElementById("input2").value);
+  console.log(userNumber2);
 
   // subtract the last result by the user's number and reassign lastResult
-  lastResult = subtract(lastResult, userNumber);
-  console.log('lastResult (after):', typeof lastResult, '\n', lastResult);
+  if(lastResult === 0 || (userNumber1 !==0 && userNumber2 !== 0)) {
+    const result =  subtract(userNumber1, userNumber2);
+    lastResult = result;
+    console.log('lastResult (after):', typeof lastResult, '\n', lastResult);
+  } else {
+    if (userNumber1 !==0) {
+      const result =  subtract(lastResult, userNumber1);
+      lastResult = result;
+      console.log('lastResult (after):', typeof lastResult, '\n', lastResult);
+    } else {
+      const result =  subtract(lastResult, userNumber2);
+      lastResult = result;
+      console.log('lastResult (after):', typeof lastResult, '\n', lastResult);
+    }
+  };
 
   alert(`the new result is: ${lastResult}`);
-  document.getElementById("input1").value = '';
+  const reset1 = document.getElementById(`input1`);
+  reset1.value = ``;
+  const reset2 = document.getElementById(`input2`);
+  reset2.value = ``;
 }

@@ -26,7 +26,7 @@ body:before {
     transform: translate(-50%, -50%);
     background:#fce4ec;
     width: 50vw;
-    height: 70vh;
+    height: 75vh;
     border-radius: 10px;
 
 } 
@@ -96,6 +96,13 @@ button.btn-main{
 @media(max-width:768px){
     .container {
         width: 70vw;
-        height: 70vh;
+        height: 85vh;
+    }
+
+    .box.input{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
