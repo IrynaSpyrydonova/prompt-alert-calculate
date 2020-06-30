@@ -81,15 +81,30 @@ function divideHandler() {
   console.log('-- action: divide');
   console.log('lastResult (before):', typeof lastResult, '\n', lastResult);
 
-  // read a number from the user
-  const num1 = Number(document.getElementById("input1").value);
-
-  // divide the last result by the user's number and reassign lastResult
-  const result = divide(num1,lastResult);
-  lastResult = result;
+    // read a number from the user
+    let num1 = Number(document.getElementById('input1').value);
+    let num2 = Number(document.getElementById('input2').value);
   
-  console.log('lastResult (after):', typeof lastResult, '\n', lastResult);
-
-  alert(`the new result is: ${lastResult}`);
-  document.getElementById("input1").value = '';
-}
+    // divide the last result by the user's number and reassign lastResult
+    if(lastResult === 0 || (num1 !==0 && num2 !== 0)) {
+      const result =  divide(num1, num2);
+      lastResult = result;
+      console.log('lastResult (after):', typeof lastResult, '\n', lastResult);
+    } else {
+      if (num1 !==0) {
+        const result =  divide(lastResult, num1);
+        lastResult = result;
+        console.log('lastResult (after):', typeof lastResult, '\n', lastResult);
+      } else {
+        const result =  divide(lastResult, num2);
+        lastResult = result;
+        console.log('lastResult (after):', typeof lastResult, '\n', lastResult);
+      }
+    };
+    
+    alert(`the new result is: ${lastResult}`);
+      const reset1 = document.getElementById(`input1`);
+      reset1.value = ``;
+      const reset2 = document.getElementById(`input2`);
+      reset2.value = ``;
+  }
